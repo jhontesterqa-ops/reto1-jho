@@ -1,0 +1,47 @@
+name: Ejecución Automática de Pruebas 🚀
+
+# Esto dice: "Ejecútame cada vez que haga un push a la rama main"
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  test-execution:
+    runs-on: ubuntu-latest # Usamos una máquina virtual Linux
+
+    steps:
+    # 1. Descargamos tu código en la máquina virtual
+    - name: 📥 Checkout del repositorio
+      uses: actions/checkout@v4
+
+    # 2. Preparamos el entorno de Node.js
+    - name: 🟢 Configurar Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+
+    # 3. Instalamos las dependencias (npm install)
+    - name: 📦 Instalar dependencias
+      run: npm ci
+
+    # 4. Instalamos los navegadores necesarios para Playwright
+    - name: 🎭 Instalar navegadores Playwright
+      run: npx playwright install --with-deps
+
+    # 5. EJECUCIÓN CLAVE: Esto levanta el json-server y corre los tests
+    # Usamos el mismo comando 'npm test' que arreglamos en tu PC
+    - name: 🔥 Ejecutar Pruebas (Mock Server + Cucumber)
+      run: npm test
+
+    # 6. Guardamos los reportes para que puedas descargarlos
+    # 'if: always()' asegura que se guarde el reporte aunque fallen las pruebas
+    - name: 📊 Subir Reporte HTML
+      if: always() 
+      uses: actions/upload-artifact@v4
+      with:
+        name: reporte-cucumber
+        path: reports/
+        retention-days: 30
