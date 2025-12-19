@@ -1,0 +1,24 @@
+{
+  "name": "reto1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "server": "json-server --watch db.json --port 3000 --routes routes.json",
+    "test:run": "cucumber-js",
+    "test": "start-server-and-test server http://localhost:3000/users test:run"
+  },
+  "keywords": [],
+  "author": "JHO",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@cucumber/cucumber": "^12.4.0",
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.3",
+    "json-server": "^0.17.4",
+    "start-server-and-test": "^2.1.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
