@@ -34,7 +34,29 @@ Se utiliza **JSON-Server** para simular localmente la API, garantizando:
 
 Este proyecto cuenta con un comando unificado que levanta el servidor local, ejecuta las pruebas y apaga el servidor al finalizar.
 
+Para ejecutar la prueba adecuadamente debemos reactivar la bd.jason cambiando su contenido por 
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "george.bluth@reqres.in",
+      "first_name": "George",
+      "last_name": "Bluth",
+      "avatar": "https://reqres.in/img/faces/1-image.jpg"
+    },
+    {
+      "id": 2,
+      "email": "janet.weaver@reqres.in",
+      "first_name": "Janet",
+      "last_name": "Weaver",
+      "avatar": "https://reqres.in/img/faces/2-image.jpg"
+    }
+  ]
+}
+
 Simplemente ejecuta:
 
 ```bash
 npm test
+
+# Aunque noes una buena practica voy a incluir los reportes en el repositorio de manera que puedan consultarlos sin ejecutar las pruebas

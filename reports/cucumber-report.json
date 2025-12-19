@@ -1,0 +1,304 @@
+[
+  {
+    "description": "  Como QA Automation\n  Quiero manipular los datos de usuarios\n  Para verificar el correcto funcionamiento del CRUD",
+    "elements": [
+      {
+        "description": "",
+        "id": "gestión-de-usuarios-en-reqres-api;consultar-un-usuario-creado-por-id",
+        "keyword": "Scenario",
+        "line": 11,
+        "name": "Consultar un usuario creado por ID",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 20324007
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que el servicio de API está disponible en \"http://localhost:3000\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 931520
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 12,
+            "name": "creo un usuario con nombre \"Morpheus\" y trabajo \"Leader\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:22"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 103125851
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 13,
+            "name": "consulto el usuario por su ID",
+            "match": {
+              "location": "src/steps/userSteps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 19207832
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 15,
+            "name": "la respuesta debe tener el código de estado 200",
+            "match": {
+              "location": "src/steps/userSteps.ts:40"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 6123846
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 16,
+            "name": "los datos del usuario consultado deben coincidir con \"Morpheus\" y \"Leader\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:44"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 4489429
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 9985875
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@create_and_query",
+            "line": 10
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-usuarios-en-reqres-api;actualizar-datos-de-usuario-y-verificar",
+        "keyword": "Scenario",
+        "line": 19,
+        "name": "Actualizar datos de usuario y verificar",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 23867263
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que el servicio de API está disponible en \"http://localhost:3000\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2818003
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 20,
+            "name": "que existe un usuario creado con nombre \"Neo\" y trabajo \"The One\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:50"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1255559
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 21,
+            "name": "actualizo el usuario con nuevo nombre \"Neo Updated\" y trabajo \"Matrix Rescuer\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:54"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 33556547
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 22,
+            "name": "la respuesta de actualización debe ser 200",
+            "match": {
+              "location": "src/steps/userSteps.ts:60"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 2214513
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 23,
+            "name": "la respuesta debe contener los datos actualizados \"Neo Updated\" y \"Matrix Rescuer\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:64"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3394588
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 5285230
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@update",
+            "line": 18
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "gestión-de-usuarios-en-reqres-api;eliminar-un-usuario-y-verificar-su-ausencia",
+        "keyword": "Scenario",
+        "line": 26,
+        "name": "Eliminar un usuario y verificar su ausencia",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 6764347
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 8,
+            "name": "que el servicio de API está disponible en \"http://localhost:3000\"",
+            "match": {
+              "location": "src/steps/userSteps.ts:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 607351
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 27,
+            "name": "que existe un usuario con ID 2 para eliminar",
+            "match": {
+              "location": "src/steps/userSteps.ts:70"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1121285
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "When ",
+            "line": 28,
+            "name": "elimino al usuario",
+            "match": {
+              "location": "src/steps/userSteps.ts:74"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 29283421
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 29,
+            "name": "el código de respuesta de eliminación debe ser 200",
+            "match": {
+              "location": "src/steps/userSteps.ts:79"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 3447166
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "And ",
+            "line": 30,
+            "name": "al consultar la lista de usuarios, el usuario eliminado no debe existir",
+            "match": {
+              "location": "src/steps/userSteps.ts:83"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 40227796
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 3762266
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@delete",
+            "line": 25
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "id": "gestión-de-usuarios-en-reqres-api",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Gestión de usuarios en Reqres API",
+    "tags": [],
+    "uri": "features/users.feature"
+  }
+]
