@@ -22,8 +22,8 @@ Se utiliza **JSON-Server** para simular localmente la API, garantizando:
 
 1.  Clonar el repositorio:
     ```bash
-    git clone https://github.com/jhontesterqa-ops/reto1-jho.git
-    cd reto1-jho
+    git clone https://github.com/jhontesterqa-ops/ReqRes_Automation.git
+    cd ReqRes_Automation
     ```
 2.  Instalar dependencias:
     ```bash
@@ -59,4 +59,4 @@ Simplemente ejecuta:
 ```bash
 npm test
 
-# Aunque noes una buena practica voy a incluir los reportes en el repositorio de manera que puedan consultarlos sin ejecutar las pruebas
+# Aunque no es una buena practica voy a incluir los reportes en el repositorio de manera que puedan consultarlos sin ejecutar las pruebas
