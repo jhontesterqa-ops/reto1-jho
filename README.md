@@ -59,4 +59,4 @@ Simplemente ejecuta:
 ```bash
 npm test
 
-# Aunque noes una buena practica voy a incluir los reportes en el repositorio de manera que puedan consultarlos sin ejecutar las pruebas
+# Aunque no es una buena practica voy a incluir los reportes en el repositorio de manera que puedan consultarlos sin ejecutar las pruebas
